@@ -16,6 +16,9 @@ List::List()
 
 }
 
+/*add a node to the end of a linked list
+requires parameter of type int
+*/
 void List::addNode(int dat)
 {
 	nodePtr N = new node;
@@ -34,6 +37,9 @@ void List::addNode(int dat)
 	else
 		head = N;
 }
+/* adds a node to the beginning of a linked list
+requires 1 parameter of type int
+*/
 
 void List::addFront(int dat)
 {
@@ -52,6 +58,10 @@ void List::addFront(int dat)
 	}
 
 }
+/*
+adds a node after an existing node in a linked list
+requires 2 parameters of type int
+*/
 void List::addAfter(int dat, int val)
 {
 	nodePtr N = new node;
@@ -80,6 +90,10 @@ void List::addAfter(int dat, int val)
 	}
 
 }
+/*
+removes a node from a linked list
+requires 1 paremeter of type int
+*/
 
 void List::delNode(int dat)
 {
@@ -120,6 +134,8 @@ void List::delNode(int dat)
 	}
 }
 
+/*method to reverse the elements of a linked list, ie head becomes tail, tail becomes head
+*/
 void List::reverse()
 {
 	if (isEmpty())
@@ -144,7 +160,8 @@ void List::reverse()
 	head = current;
 
 }
-
+/*method to display the elements of a linked list
+*/
 void List::showList()
 {
 	if (isEmpty())
@@ -162,6 +179,10 @@ void List::showList()
 	}
 
 }
+
+/*method to determine if a linked list is empty
+returns type boolean
+*/
 
 bool List::isEmpty()
 {
